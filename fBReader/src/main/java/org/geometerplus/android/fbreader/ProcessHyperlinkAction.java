@@ -71,7 +71,14 @@ class ProcessHyperlinkAction extends FBAndroidAction {
 			final ZLTextHyperlink hyperlink = ((ZLTextHyperlinkRegionSoul)soul).Hyperlink;
 			switch (hyperlink.Type) {
 				case FBHyperlinkType.EXTERNAL:
-					openInBrowser(hyperlink.Id);
+//					openInBrowser(hyperlink.Id);
+//
+					 SuperActivityToast toast1;
+
+					toast1 = new SuperActivityToast(BaseActivity, SuperToast.Type.STANDARD);
+					toast1.setText("弹个框或者其他操作");
+					toast1.setDuration(3000);
+					BaseActivity.showToast(toast1);
 					break;
 				case FBHyperlinkType.INTERNAL:
 				case FBHyperlinkType.FOOTNOTE:

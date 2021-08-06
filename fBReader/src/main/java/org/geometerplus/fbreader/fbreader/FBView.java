@@ -84,6 +84,7 @@ public final class FBView extends ZLTextView {
 		), x, y);
 	}
 
+	// 点击响应
 	@Override
 	public void onFingerSingleTap(int x, int y) {
 		final ZLTextRegion hyperlinkRegion = findRegion(x, y, maxSelectionDistance(), ZLTextRegion.HyperlinkFilter);
